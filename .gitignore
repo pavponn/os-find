@@ -130,3 +130,12 @@ _deps
 ### CMake Patch ###
 # External projects
 *-prefix/
+
+# .idea folder
+.idea/
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
