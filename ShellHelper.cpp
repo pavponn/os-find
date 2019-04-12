@@ -39,6 +39,14 @@ std::vector<std::string> ShellHelper::getEnvironmentVector(std::map<std::string,
     return result;
 }
 
+void ShellHelper::setDefaultEnvironmentalVars(char** envp, std::map<std::string, std::string>& environment) {
+    std::vector<std::string> cur;
+    for (int i = 0; *envp != nullptr; ++i) {
+        std::string str(*(envp++));
+        auto varInfo = ParseUtils::parseEnvironmentalVar(str);
+        environment[varInfo.first] = varInfo.second;
+    }
+}
 
 void ShellHelper::execute(std::vector<std::string>& cmd, std::map<std::string, std::string>& environment) {
     int status;
@@ -69,7 +77,7 @@ void ShellHelper::execute(std::vector<std::string>& cmd, std::map<std::string, s
 }
 
 void ShellHelper::printErrorMessage(std::string const& message) {
-    std::cerr << "Error occurred: " << message <<  " Code :" << strerror(errno) << std::endl;
+    std::cerr << "Error occurred: " << message << " Code: " << strerror(errno) << std::endl;
 }
 
 

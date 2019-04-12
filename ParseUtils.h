@@ -11,10 +11,10 @@ public:
     ParseUtils() = default;
     ~ParseUtils() = default;
 
-
     static std::vector<std::string> splitString(std::string const&);
     static std::pair<std::string, std::string> parseEnvironmentalVar(std::string const&);
     static std::vector<std::string> parsePath(std::string const&);
+    static std::vector<std::string> getArguments(int, char**);
 
 };
 

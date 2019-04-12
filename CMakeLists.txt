@@ -3,7 +3,7 @@ project(os_find)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(os_find
+add_executable(find
         find.cpp
         ParseUtils.cpp
         ParseUtils.h

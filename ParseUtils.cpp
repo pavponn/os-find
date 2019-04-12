@@ -42,3 +42,12 @@ std::vector<std::string> ParseUtils::parsePath(std::string const& str) {
     }
     return result;
 }
+
+std::vector<std::string> ParseUtils::getArguments(int argc, char* argv[]) {
+    std::vector<std::string> args;
+    args.reserve(static_cast<unsigned long>(argc));
+    for (size_t i = 0; i < argc; ++i) {
+        args.emplace_back(argv[i]);
+    }
+    return args;
+}

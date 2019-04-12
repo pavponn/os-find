@@ -6,7 +6,7 @@
 
 #include <string>
 
-enum sizeType { MORE, LESS, EXACT };
+enum sizeType { MORE, LESS, EQUAL };
 
 class FindOptions {
 public:
