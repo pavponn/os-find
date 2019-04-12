@@ -15,10 +15,8 @@ std::map<std::string, std::string> environment;
 std::vector<std::string> result;
 
 void printHelp() {
-    std::cout << "find - locate specified files recursively in the provided path\n"
-                 "find <path> [flags]\n"
-                 "\n"
-                 "Supported arguments are:\n"
+    std::cout << "find - locate specified files in the provided path\n"
+                 "Supported arguments:\n"
                  "-name   <name>        - filter by filename equals <name> \n"
                  "-inum   <number>      - filter by inode number equals <number>\n"
                  "-size   <[-=+]size>   - filter by size (less, equal, more)\n"
