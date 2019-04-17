@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <sstream>
+#include <string.h>
+#include <cstring>
 #include <queue>
 #include <dirent.h>
 #include <sys/stat.h>

@@ -6,6 +6,8 @@
 #include "ParseUtils.h"
 #include <unistd.h>
 #include <iostream>
+#include <string.h>
+#include <cstring>
 
 std::string ShellHelper::getCommand(std::vector<std::string> const& paths, std::string const& file) {
     for (auto const& path: paths) {
@@ -79,7 +81,3 @@ void ShellHelper::execute(std::vector<std::string>& cmd, std::map<std::string, s
 void ShellHelper::printErrorMessage(std::string const& message) {
     std::cerr << "Error occurred: " << message << " Code: " << strerror(errno) << std::endl;
 }
-
-
-
-
