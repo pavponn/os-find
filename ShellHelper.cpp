@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <iostream>
 #include <string.h>
-#include <cstring>
 
 std::string ShellHelper::getCommand(std::vector<std::string> const& paths, std::string const& file) {
     for (auto const& path: paths) {
