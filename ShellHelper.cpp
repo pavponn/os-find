@@ -5,7 +5,11 @@
 #include "ShellHelper.h"
 #include "ParseUtils.h"
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
 #include <iostream>
+#include <algorithm>
 #include <string.h>
 
 std::string ShellHelper::getCommand(std::vector<std::string> const& paths, std::string const& file) {

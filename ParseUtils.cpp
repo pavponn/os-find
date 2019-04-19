@@ -4,6 +4,8 @@
 
 #include "ParseUtils.h"
 #include <sstream>
+#include <iterator>
+#include <algorithm>
 
 std::vector<std::string> ParseUtils::splitString(std::string const& str) {
     std::istringstream stream(str);
