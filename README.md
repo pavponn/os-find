@@ -1,17 +1,21 @@
-# Необходимо написать подмножество утилиты find.
+# Find
+Find is an utility to search for specific files on your computer written in C++.
+This is an educational project, aimed at understanding how to interact with POSIX API to retrieve file information.
 
-## Программа должна:
+## Main Features
+* Filter by name, size ranges, inodes and link counts
+* Print results
+* Pass results to executable
 
-- Первым аргументом принимать абсолютный путь, в котором будет производиться поиск файлов.
-- По-умолчанию выводить в стандартный поток вывода все найденные файлы по этому пути
-- Поддерживать аргумент -inum num. Аргумент задает номер инода
-- Поддерживать аргумент -name name. Аргумент задает имя файла
-- Поддерживать аргумент -size [-=+]size. Аргумент задает фильтр файлов по размеру(меньше, равен, больше)
-- Поддерживать аргумент -nlinks num. Аргумент задает количество hardlink'ов у файлов
-- Поддерживать аргумент -exec path. Аргумент задает путь до исполняемого файла, которому в качестве единственного аргумент нужно передать найденный в иерархии файл
-- Поддерживать комбинацию аргументов. Например хочется найти все файлы с размером больше 1GB и скормить их утилите /usr/bin/sha1sum.
-- Выполнять поиск рекурсивно, в том числе во всех вложенных директориях.
-- Сильные духом призываются к выполнению задания с использованием системного вызова getdents(2). Остальные могут использовать readdir и opendir для чтения содержимого директории.
+## Usage 
+`find <path> <args..>` - locate specified files in the provided path
+
+### Supported arguments:
+* `-name   <name>`      - filter by filename equals `<name>`
+* `-inum   <number>`    - filter by inode number equals `<number>`
+* `-size   <[-=+]size>` - filter by size (*less, equal* or *more*)
+* `-nlinks <number>`    - hardlink count equals `<num>`
+* `exec   <executable>` - pass located files to executable file `<executable>`
 
 ## Build
 ```
@@ -20,3 +24,12 @@ $ cd build
 $ cmake ..
 $ make
 ```
+Requires C++14 compiler
+
+## Test
+Tested manually on macOS Mojave 10.14.3 and Linux 4.12.
+
+## Copyright
+Pavel Ponomarev, 2019 (pavponn@gmail.com)
+
+MIT License.
