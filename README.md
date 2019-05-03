@@ -8,7 +8,7 @@ This is an educational project, aimed at understanding how to interact with POSI
 * Pass results to executable
 
 ## Usage 
-`find <path> <args..>` - locate specified files in the provided path
+`find <path> <args..>` - locate specifiс files in the provided path
 
 ### Supported arguments:
 * `-name   <name>`      - filter by filename equals `<name>`
