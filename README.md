@@ -1,4 +1,4 @@
-# Find
+# 🔍 Find
 Find is an utility to search for specific files on your computer written in C++.
 This is an educational project, aimed at understanding how to interact with POSIX API to retrieve file information.
 
