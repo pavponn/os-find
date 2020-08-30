@@ -1,4 +1,6 @@
 # 🔍 Find
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pavponn/os-find/blob/master/LICENSE)
+
 Find is an utility to search for specific files on your computer written in C++.
 This is an educational project, aimed at understanding how to interact with POSIX API to retrieve file information.
 
